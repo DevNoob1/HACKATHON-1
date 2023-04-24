@@ -1,0 +1,44 @@
+.Navbar {
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.Navbar .login {
+    margin-right: 10vh;
+    display: flex;
+    height: 7vh;
+    align-items: center;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    border-top-left-radius: 3vh;
+    border-bottom-left-radius: 3vh;
+    background-color: transparent;
+    width: 26vh;
+    justify-content: space-between;
+}
+
+.Navbar div button {
+    font-size: 2vh;
+    font-weight: 700;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    border-top-left-radius: 3vh;
+    border-bottom-left-radius: 3vh;
+    cursor: pointer;
+    border: 2px solid black;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    opacity: 60%;
+    justify-content: center;
+    width: 50%;
+}
+
+.Navbar button:hover {
+    opacity: 100%;
+}

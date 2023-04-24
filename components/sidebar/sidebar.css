@@ -1,0 +1,46 @@
+.Sidebar {
+    background-color: black;
+    position: fixed;
+    min-height: 100vh;
+    color: white;
+    width: 40vh;
+}
+
+.Sidebar a {
+    text-decoration: none;
+}
+
+.Sidebar img {
+    height: 5vh;
+    padding: 25px;
+    background-color: black;
+}
+
+.Sidebar h5 {
+    background-color: black;
+    padding-bottom: 3vh;
+    margin-left: 3vh;
+}
+
+
+.Sidebar h5 img {
+    background-color: black;
+    background-color: white;
+    height: 3vh;
+}
+
+.Sidebar button {
+    background-color: black;
+    position: absolute;
+    bottom: 0px;
+    margin: 3vh;
+    height: 4.4vmin;
+    color: white;
+    border: .1vmin white solid;
+    font-size: 2vh;
+    width: 12vmin;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    border-top-left-radius: 3vh;
+    border-bottom-left-radius: 3vh;
+}

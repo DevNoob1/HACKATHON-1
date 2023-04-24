@@ -1,0 +1,55 @@
+* {
+    color: aliceblue;
+    background-color: black;
+}
+
+.gane {
+    padding-top: 2vmin;
+    height: 25vh;
+    width: 20vmin;
+
+}
+
+.description h6 {
+    color: rgb(186, 185, 185);
+}
+
+.boxes {
+    margin-left: 45vmin;
+    height: 20vmin;
+    width: 20vmin;
+    position: relative;
+}
+
+.boxes i img {
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 15vmin;
+    left: 16vmin;
+    height: 29px;
+}
+
+.boxes i img:hover {
+    background-color: red;
+}
+
+.boxes img {
+    height: 20vmin;
+
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description img {
+    height: 3vmin;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.description img:hover {
+    background-color: rgb(39, 172, 39);
+}
