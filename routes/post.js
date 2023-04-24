@@ -40,7 +40,7 @@ router.put("/:id/like", async(req, res)=>
 {
   try{
     const post = await Post.findById(req.params.id);
-    const user = await Post.findById(req.params.userId);
+    const user = await User.findById(req.body.id);
     if(!user.liked_song.includes(post.userId)) {
       await user.updateOne({ $push: { liked_song: req.params.id } });
       await post.updateOne(likes+1)
@@ -61,6 +61,27 @@ router.get("/:id", async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
+  });
+router.put("/:id", async(req, res) => {
+  try {
+    const user = await User.findById(req.body.id);
+    const post = await Post.findById(req.params.id);
+    if(!user.playlist.includes(post.id))
+    {
+      await user.updateOne({ $push: {playlist: post._id}});
+    }
+    else{
+      res.status(403).json("this song is already in your playlist");
+    }
+  }
+  catch (err) { 
+     res.status(500).json(err);
+  }
+  })
+  router.get("/like", async (req, res) => {
+    const user = await User.findById(req.user._id);
+    const posts = await Post.find({ _id: user.liked_song });
+    res.status(200).send({ data: posts });
   });
 
 module.exports = router;
