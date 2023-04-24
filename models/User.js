@@ -14,6 +14,7 @@ const UserSchema = new mongoose.Schema(
       required: true,
       max: 50,
       unique: true,
+      validate: emailValidator,
     },
     password: {
       type: String,
@@ -36,6 +37,14 @@ const UserSchema = new mongoose.Schema(
       type: Array,
       default: []
     },
+    liked_song:{
+      type: Array,
+      default: [],
+    },
+    playlist:{
+      type: Array,
+      default: []
+    }
   },
   { timestamps: true }
 );
